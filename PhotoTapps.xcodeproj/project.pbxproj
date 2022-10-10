@@ -13,6 +13,7 @@
 		140434D628F0090000E4B5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140434D528F0090000E4B5C2 /* Assets.xcassets */; };
 		140434D928F0090000E4B5C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 140434D728F0090000E4B5C2 /* LaunchScreen.storyboard */; };
 		140434FD28F00C4100E4B5C2 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140434FC28F00C4100E4B5C2 /* PhotosCollectionViewController.swift */; };
+		14AFDBB728F4657400FF56BA /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFDBB628F4657400FF56BA /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		140434D828F0090000E4B5C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		140434DA28F0090000E4B5C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		140434FC28F00C4100E4B5C2 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		14AFDBB628F4657400FF56BA /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				140434CC28F008FE00E4B5C2 /* AppDelegate.swift */,
 				140434CE28F008FE00E4B5C2 /* SceneDelegate.swift */,
 				140434FC28F00C4100E4B5C2 /* PhotosCollectionViewController.swift */,
+				14AFDBB628F4657400FF56BA /* PhotoCell.swift */,
 				140434D228F008FE00E4B5C2 /* Main.storyboard */,
 				140434D528F0090000E4B5C2 /* Assets.xcassets */,
 				140434D728F0090000E4B5C2 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14AFDBB728F4657400FF56BA /* PhotoCell.swift in Sources */,
 				140434CD28F008FE00E4B5C2 /* AppDelegate.swift in Sources */,
 				140434CF28F008FE00E4B5C2 /* SceneDelegate.swift in Sources */,
 				140434FD28F00C4100E4B5C2 /* PhotosCollectionViewController.swift in Sources */,
