@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -45,6 +46,7 @@
                                 <size key="customSize" width="150" height="150"/>
                                 <connections>
                                     <outlet property="dogImageView" destination="mbX-oL-qHr" id="aeG-i2-Vpu"/>
+                                    <segue destination="5Tj-pe-wge" kind="presentation" identifier="pickPhotoSegue" id="cfu-Fp-FWn"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -58,6 +60,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JX1-zz-995" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1389.2307692307693" y="-28.436018957345969"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="sUG-Ea-Bw7">
+            <objects>
+                <viewController id="5Tj-pe-wge" customClass="PhotoViewController" customModule="PhotoTapps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="55B-Th-LbX">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSj-TK-DKN">
+                                <rect key="frame" x="121.00000000000001" y="718" width="148.33333333333337" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="AUy-uC-NoB"/>
+                                    <constraint firstAttribute="height" constant="35" id="TiA-ng-sUm"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system" title=" Tap to Share">
+                                    <color key="baseForegroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="shareAction:" destination="5Tj-pe-wge" eventType="touchUpInside" id="WV2-Os-swF"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AVc-D5-Cdi">
+                                <rect key="frame" x="0.0" y="237" width="390" height="313"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="313" id="dld-bk-gNS"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="78u-5h-HqI"/>
+                        <color key="backgroundColor" red="0.11636995869813505" green="0.11636995869813505" blue="0.11636995869813505" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="AVc-D5-Cdi" firstAttribute="centerY" secondItem="55B-Th-LbX" secondAttribute="centerY" id="6h8-5w-88T"/>
+                            <constraint firstItem="AVc-D5-Cdi" firstAttribute="leading" secondItem="78u-5h-HqI" secondAttribute="leading" id="jPt-0h-ubc"/>
+                            <constraint firstItem="78u-5h-HqI" firstAttribute="bottom" secondItem="iSj-TK-DKN" secondAttribute="bottom" constant="34" id="jhE-OX-cOO"/>
+                            <constraint firstItem="iSj-TK-DKN" firstAttribute="centerX" secondItem="78u-5h-HqI" secondAttribute="centerX" id="luO-O6-vkL"/>
+                            <constraint firstItem="78u-5h-HqI" firstAttribute="trailing" secondItem="AVc-D5-Cdi" secondAttribute="trailing" id="vP2-UP-zFf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="AVc-D5-Cdi" id="byA-P2-zFt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yck-Be-vFQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2287.6923076923076" y="-28.436018957345969"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uic-L0-rPb">
@@ -80,6 +129,7 @@
     </scenes>
     <resources>
         <image name="dog1" width="640" height="480"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
